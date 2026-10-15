@@ -140,7 +140,7 @@ jobs:
         if: matrix.os == 'windows-latest'
 
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Build with build.go
         run: |
@@ -236,7 +236,7 @@ jobs:
           go-version: ${{ env.latest_go }}
 
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Cross-compile for subset ${{ matrix.subset }}
         run: |
@@ -254,7 +254,7 @@ jobs:
           go-version: ${{ env.latest_go }}
 
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v3
@@ -294,7 +294,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Docker meta
         id: meta
